@@ -1,0 +1,149 @@
+:root {
+    --mobile-view: 600px;
+    --font: "Roboto", sans-serif;
+    --header-font: "Lobster", sans-serif;
+    --black-25: rgb(0 0 0 / 25%);
+    --black-50: rgb(0 0 0 / 50%);
+    --black-75: rgb(0 0 0 / 75%);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    
+    font-family: var(--font);
+    font-size: 2.5vh;
+    color: rgb(0 0 0);
+}
+
+main {
+    flex: 1;
+    background-color: var(--black-50);
+}
+
+.main_box,
+.article,
+.collapsiblePart {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.main_box {
+    width: 75%;
+    min-width: 500px;
+}
+
+.article {
+    user-select: none;
+    background-color: white;
+    margin: calc(3%);
+    padding: calc(10%);
+    gap: 1em;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--header-font);
+    padding: 0.5em;
+}
+
+ol, a {
+    color: black;
+    line-height: 2;
+    font-weight: bold;
+    text-align: left;
+    list-style-position: inside;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.button_style {
+    align-self: center;
+    min-width: 50%;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: var(--font);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    margin: 0.5em;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    background-color: var(--black-25);
+}
+
+.goToPage {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    box-shadow: none;
+    min-width: unset;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    padding: 0.1em;
+    background-color: var(--black-50);
+    font-size: 2em;
+
+    p {
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.button_style:hover {
+    background-color: var(--black-75);
+    color: white;
+}
+
+.content_collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease-out;
+}
+
+._gradient {
+    animation: animateBg 10s linear infinite;
+    background-image: linear-gradient(90deg,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000,#ffff00);
+    background-size: 700% 100%;
+}
+
+@keyframes animateBg {
+    0% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+@media (max-width: 600px) {
+    .main_box {
+        width: unset;
+        min-width: unset;
+        font-size: 0.9em;
+    }
+
+    .article {
+        padding: 1em;
+    }
+}
