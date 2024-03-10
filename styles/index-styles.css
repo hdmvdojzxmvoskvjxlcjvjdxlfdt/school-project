@@ -2,10 +2,10 @@
     --mobile-view: 600px;
     --font: "Consolas";
     --header-font: "Lobster", sans-serif;
-    --white-10: rgb(255 255 255 / 10%);
-    --white-75: rgb(255 255 255 / 75%);
+    --white-10: rgb(255 255 255 / 15%);
+    --white-75: rgb(255 255 255 / 85%);
     --black-50: rgb(0 0 0 / 50%);
-    --black-75: rgb(0 0 0 / 75%);
+    --black-75: rgb(0 0 0 / 85%);
 }
 
 html,
